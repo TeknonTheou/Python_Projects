@@ -29,3 +29,10 @@ class Vendor(User):
         else:
             print("You are not authorized for this page.")
 
+new_customer = Customer("John Doe", "JDoe@gmail.com", "abcd1234", 123)
+new_customer.mailing_adress = "123 Anywhere"
+new_customer.mailing_list = False
+
+print(new_customer.name)
+print(new_customer.account)
+print(new_customer.mailing_address)
