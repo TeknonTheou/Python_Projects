@@ -6,9 +6,9 @@ class card(ABC):
         print("Your purchase amount:",amount)
 #this function is telling us to pass in an argument, but we don't say how or
 #what kind of data it will be
-        @abstractmethod
-        def payment (Self, amount):
-            pass
+    @abstractmethod
+    def payment (Self, amount):
+        pass
 
 class CreditCardPayment(card):
 #here we've defined how to implement the payment function from the invoice class
