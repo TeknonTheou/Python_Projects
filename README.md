@@ -5,6 +5,7 @@
 <ul>
     <li>PhonebookDemo</li>
     <li>File_Transfer_GUI</li>
+    <li>Hangman.py</li>
     
 </ul>
 
@@ -13,3 +14,6 @@ This project functions as a phone book for a user. It saves a contact's name, ph
 
 <h2>File_Transfer_GUI</h2>
 This project automates scanning a folder for all files in a chosen directory and copying any files updated within the last 24 hours to another chosen directory.
+
+<h2>Hangman.py</h2>
+Basic Hangman game, with "Stick man" drawn via turtle module
