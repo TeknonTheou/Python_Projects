@@ -6,6 +6,7 @@
     <li>PhonebookDemo</li>
     <li>File_Transfer_GUI</li>
     <li>Hangman.py</li>
+    <li>Webgen.py</li>
     
 </ul>
 
@@ -17,3 +18,7 @@ This project automates scanning a folder for all files in a chosen directory and
 
 <h2>Hangman.py</h2>
 Basic Hangman game, with "Stick man" drawn via turtle module
+
+<h2>Webgen.py</h2>
+A basic GUI that creates a simple webpage (html file) with a heading and single line of text.
+
