@@ -7,6 +7,7 @@
     <li>File_Transfer_GUI</li>
     <li>Hangman.py</li>
     <li>Webgen.py</li>
+    <li>Secret Message Encryption.py</li>
     
 </ul>
 
@@ -21,4 +22,7 @@ Basic Hangman game, with "Stick man" drawn via turtle module
 
 <h2>Webgen.py</h2>
 A basic GUI that creates a simple webpage (html file) with a heading and single line of text.
+
+<h2>>Secret Message Encryption.py</h2>
+Simple, fun message encryption program that "encrypts" message using a simple scrambling algorithm.
 
