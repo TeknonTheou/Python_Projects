@@ -57,7 +57,7 @@ def decrypt(message):
     return clear_message
 
 def get_task():
-    task = simpledialog.askstring('Task', 'Do you want to encrypt or decrypt?')
+    task = simpledialog.askstring('Task', 'Enter "E" to encrypt or "D" to decrypt')
     return task
 
 def get_message():
@@ -68,11 +68,11 @@ root = Tk()
 
 while True:
     task = get_task()
-    if task == 'encrypt':
+    if task == 'E':
         message = get_message()
         encrypted = encrypt(message)
         messagebox.showinfo('Ciphertext of the secret message is:', encrypted)
-    elif task == 'decrypt':
+    elif task == 'D':
         message = get_message()
         decrypted = decrypt(message)
         messagebox.showinfo('Plaintext of the secret message is:', decrypted)
