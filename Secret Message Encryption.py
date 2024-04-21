@@ -1,4 +1,5 @@
 from tkinter import messagebox, simpledialog, Tk
+from random import choice
 
 def is_even(number):
     return number %2 == 0
@@ -17,6 +18,20 @@ def get_odd_letters(message):
             odd_letters.append(message[counter])
     return odd_letters
 
+def confuse(message):
+    encrypted_list = []
+    fake_letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'i', 'r', 's', 't', 'u', 'v']
+    for counter in range(0, len(message)):
+        encrypted_list.append(message[counter])
+        encrypted_list.append(choice(fake_letters))
+    confused_message = ''.join(encrypted_list)
+    return confused_message
+
+def clarify(message):
+    even_letters = get_even_letters(message)
+    clarified_message = ''.join(even_letters)
+    return clarified_message
+
 def swap_letters(message):
     letter_list = []
     if not is_even(len(message)):
@@ -28,6 +43,18 @@ def swap_letters(message):
         letter_list.append(even_letters[counter])
     new_message = ''.join(letter_list)
     return new_message
+
+def encrypt(message):
+    confused = confuse(message)
+    swapped_message = swap_letters(confused)
+    encrypted_message = ''.join(reversed(swapped_message))
+    return encrypted_message
+
+def decrypt(message):
+    unreversed_message = ''.join(reversed(message))
+    decrypted_message = swap_letters(unreversed_message)
+    clear_message = clarify(decrypted_message)
+    return clear_message
 
 def get_task():
     task = simpledialog.askstring('Task', 'Do you want to encrypt or decrypt?')
@@ -43,12 +70,11 @@ while True:
     task = get_task()
     if task == 'encrypt':
         message = get_message()
-        encrypted = swap_letters(message)
+        encrypted = encrypt(message)
         messagebox.showinfo('Ciphertext of the secret message is:', encrypted)
-
     elif task == 'decrypt':
         message = get_message()
-        decrypted = swap_letters(message)
+        decrypted = decrypt(message)
         messagebox.showinfo('Plaintext of the secret message is:', decrypted)
     else:
         break
